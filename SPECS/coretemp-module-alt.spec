@@ -4,7 +4,10 @@
 Summary: coretemp kernel module with a workaround for Xen restrictions
 Name: coretemp-module-alt
 Version: 1.0
-Release: 4%{?dist}
+Release: 5%{?dist}
+# Built against new kABI after cip rebase
+Requires: xcpng-kernel-kabi = 4.19.325-cip134+
+
 License: GPL
 #Source: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/hwmon/coretemp.c?h=v4.19.19
 Source: %{name}-%{version}.tar.gz
@@ -18,7 +21,7 @@ Requires(post): /usr/sbin/depmod
 Requires(postun): /usr/sbin/depmod
 
 %description
-With Xen patch https://xenbits.xen.org/gitweb/?p=xen.git;a=commitdiff;h=72e038450d3d5de1a39f0cfa2d2b0f9b3d43c6c6 
+With Xen patch https://xenbits.xen.org/gitweb/?p=xen.git;a=commitdiff;h=72e038450d3d5de1a39f0cfa2d2b0f9b3d43c6c6
 Thermal and Performance information is now hidden from PV guests including Dom0.
 This module skips check of CPU flag and reads MSR directly for Intel Package Thermal Status.
 
