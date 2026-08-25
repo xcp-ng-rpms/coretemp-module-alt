@@ -4,7 +4,7 @@
 Summary: coretemp kernel module with a workaround for Xen restrictions
 Name: coretemp-module-alt
 Version: 1.0
-Release: 5%{?dist}
+Release: 5.0.cip134.1%{?dist}
 # Built against new kABI after cip rebase
 Requires: xcpng-kernel-kabi = 4.19.325-cip134+
 
