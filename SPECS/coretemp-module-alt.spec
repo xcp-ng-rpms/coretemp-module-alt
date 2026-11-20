@@ -4,7 +4,7 @@
 Summary: coretemp kernel module with a workaround for Xen restrictions
 Name: coretemp-module-alt
 Version: 1.0
-Release: 4.0.kernelpreview.1%{?dist}
+Release: 4.0.kernelpreview.1.0.testv0.1%{?dist}
 License: GPL
 #Source: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/hwmon/coretemp.c?h=v4.19.19
 Source: %{name}-%{version}.tar.gz
